@@ -10,3 +10,5 @@ _Use better design principles_
 - Object relationship diagrams
 - Design patterns
 - Testing
+
+Learning LLD with typescript

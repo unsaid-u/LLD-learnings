@@ -1,0 +1,44 @@
+SOLID 
+
+S - Single Responsibility Principle
+    Breaking classes into multiple classes, with each being a closely knitted unit. It does not mean each class should have only single job
+    But class should have single responsibility, closely associated methods and variables etc. 
+
+
+O - Open/Closed Principle
+    Open to extension but closed for modification
+    example - Decorator pattern
+            - new classes extending same interface
+    -> Use OCP where change is expected, dont overengineer creating new classes for every small change
+
+L - Liskov Substitution Principle
+    Subtypes must be substitutable for their base types without altering correctness.
+    example - A child class must be able to replace parent class without breaking the code
+    -> This is not possible for child classes, so we need to design and create parent keeping this in mind 
+    "A subclass should not break the behavior expected from the parent class." 
+
+I - Interface Segregation Principle
+    "Clients should not be forced to depend on interfaces they do not use."
+    Segregate large interfaces into smaller, more specific ones, so that you only need to implement method you are actually going to use.
+
+D - Dependency Inversion Principle
+    Highlevel modules should not depend on lowlevel modules. Both should depend on abstractions.
+    Abstractions should not depend on details. Details should depend on abstractions.
+
+-> SOLID principles and interface patterns are good making the code easy to test. 
+
+-> The end goad is keeping the code flexible and maintainable, keep code simple and easy to understand
+
+
+
+>>> In OOP learn and follow the Interface -- class pattern, instead of subclasses (inheritance)
+
+Final refined statement (correct version)
+
+Instead of your original statement, think:
+
+✅ “Prefer interfaces and composition over inheritance, unless inheritance truly models an ‘is-a’ relationship and satisfies LSP.”
+
+🔚 One-line takeaway
+
+👉 Don’t avoid inheritance—use it carefully. Default to interfaces + composition.
