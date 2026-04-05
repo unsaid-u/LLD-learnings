@@ -1,0 +1,87 @@
+Don't try to memorize all 23 Gang of Four patterns. Focus on the "Big 6" that appear in 90% of backend interviews:
+
+1. **Strategy:** Essential for choosing algorithms at runtime (e.g., different pricing strategies for a ride-sharing app).
+2. **Observer:** The backbone of event-driven systems (e.g., notifying multiple services when an order is placed).
+3. **Factory/Abstract Factory:** Standard for object creation logic.
+4. **Decorator:** Adding functionality without inheritance (e.g., adding "Gift Wrapping" or "Insurance" to an e-commerce order).
+5. **Singleton:** For shared resources like Database Pools or Logging frameworks.
+6. **Adapter:** Connecting your system to incompatible third-party APIs.
+
+
+Creational patterns - 
+    Creational patterns are about controlling and abstracting object creation, not just avoiding new.
+        Instead of:
+            new Something()
+
+        You do:
+            factory.create()
+
+        or:
+            inject dependency    
+
+- Singleton
+- Factory / Abstract Factory
+- Builder
+
+
+Structural patterns 
+    Structural patterns deal with how classes and objects are composed to form larger systems.
+    "how to connect objects" 
+- Decorator
+- Adapter
+
+Behavioral patterns 
+    Behavioral patterns deal with how objects interact and communicate with each other.
+    "how to communicate objects" 
+- Observer
+- Strategy
+
+| Category   | Focus                           |
+| ---------- | ------------------------------- |
+| Creational | How objects are created         |
+| Structural | How objects are arranged        |
+| Behavioral | How objects **talk and behave** |
+
+
+(Strategy and Factory Pattern, The Best Software Design Pattern Combo)
+--------------------------
+
+Singleton -
+    a class has only one instance, and only provide a global point of access to it.
+    example - database connection pool, logger, config manager
+
+Factory - 
+    Provides a way to create objects without exposing the exact class
+    creating a FactoryClass, which is solely responsible for creating objects
+    
+    and for Abstract Factory - we create a factory of factories, an Interface that returns different factories
+    to remove the violation of open closed principle, in the factory pattern  
+
+    abstract factory - when a single factory is not enough to create objects, Abstract factory class
+    " -> use it if you have no idea about the exact type of objects you need to create" 
+
+Builder - 
+    - Separates the construction of a complex object from its representation.
+    - Useful for creating objects with many optional parameters or multi-step initialization.
+
+Adapter - 
+    - When two interfaces are incompatible, and you need to make them compatible - 
+        "Adapter lets incompatible interfaces work together"
+    - So you make a wrapper, adapter. 
+    - Helpful in legacy systems, or when using third party libraries
+    - example - express.js middlewares 
+
+Decorator - 
+    - The Decorator Pattern allows you to add behavior to an object dynamically without modifying the object itself.
+    - Instead of modifying the class or creating many subclasses, you wrap the object.
+    - In a code example i saw, there was a base interface for a coffee, and then different decorators for milk, sugar, etc.
+    - So basically using interfaces over subclasses, composition over inheritance
+
+
+Strategy - 
+    - "Replace if/else with polymorphism" 
+
+
+Observer - 
+    - "Publish–subscribe system"
+
